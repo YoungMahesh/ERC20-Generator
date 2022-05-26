@@ -10,7 +10,7 @@ const verifyContract = async (dataObj) => {
 		// cannot get function here as JSON.stringify doesn't support functions
 		await hre.run("verify:verify", {
 			address: dataObj.contractAddr,
-			constructorArguments: dataObj.constructorArgs,
+			// constructorArguments: dataObj.constructorArgs,
 		})
 		console.log('Verification Completed')
 	} catch (verifyContractErr) {

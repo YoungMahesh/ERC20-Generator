@@ -22,6 +22,10 @@ module.exports = {
     polygon: {
       url: `https://polygon-rpc.com/`,
       accounts: [privateKey0]
+    },
+    polygonTestnet: {
+      url: 'https://matic-mumbai.chainstacklabs.com',
+      accounts: [privateKey0]
     }
   },
   solidity: {
@@ -38,6 +42,6 @@ module.exports = {
     ]
   },
   etherscan: {
-    apiKey: etherscanApiKey
+    apiKey: polygonApiKey
   }
 }
