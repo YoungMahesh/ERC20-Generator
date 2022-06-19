@@ -9,12 +9,14 @@ export const getTokenAddressPrefix = (chainId) => {
 	if (chainId === '0x4') return 'https://rinkeby.etherscan.io/token/'
 	if (chainId === '0x89') return 'https://polygonscan.com/address/'
 	if (chainId === '0x38') return 'https://bscscan.com/address/'
+	if(parseInt(chainId) === 1666700000) return 'https://explorer.testnet.harmony.one/address/'
 	return 'https://etherscan.io/token/'
 }
 
 export const getNetworkName = (chainId) => {
 	if (chainId === '0x89') return 'PolygonScan'
 	if (chainId === '0x38') return 'BscScan'
+	if(parseInt(chainId) === 1666700000) return 'Harmony Explorer'
 	return 'Etherscan'
 }
 

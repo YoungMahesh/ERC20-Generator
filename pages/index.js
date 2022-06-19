@@ -92,10 +92,11 @@ function Home() {
       // })
     } catch (error) {
       console.log(error)
-      setButtonText1('Create')
-      setShowBtnSpinner(false)
       setMessage1('Error Occured while Creating Token')
     }
+    setButtonText1('Create')
+    setShowBtnSpinner(false)
+    setIsFormDisabled(false)
   }
 
   return (
@@ -107,7 +108,6 @@ function Home() {
       </Head>
 
       <Flex padding='15px'>
-        <Spacer />
         <Text fontSize='xl' fontWeight='bold'>ERC20 Token Generator</Text>
         <Spacer />
         <Switch size='lg'
@@ -186,14 +186,6 @@ function Home() {
         </Flex>
       </Center>
 
-      <Box position='absolute' bottom='10px' width='100%'>
-        <Text textAlign='center'
-        > Source code: <a
-          href='https://github.com/YoungMahesh/ERC20-Generator'
-          target='_blank'
-        > https://github.com/YoungMahesh/ERC20-Generator </a>
-        </Text>
-      </Box>
     </Box>
   )
 }
